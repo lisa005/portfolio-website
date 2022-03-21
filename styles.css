@@ -463,9 +463,13 @@ footer {
     transform: scale(0.7);
 }
 
-.about__desc {
+.about__desc .section__subtitle--about{
     border-left: solid 2px var(--clr-dark);
+    padding-left: 1em;
+    margin-left: 3rem;
 }
+
+
 
 @media (min-width: 800px) {
     .about__container {
@@ -478,12 +482,8 @@ footer {
     }
 
     .about__desc {
-        margin-left: 7rem;
+        margin-left: 4rem;
     }
-
-    .section__subtitle--about {
-        padding-left: 1em;
-    }    
 }
 
 /* Resume Page */
