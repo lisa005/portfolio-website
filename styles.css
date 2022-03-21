@@ -457,10 +457,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2em;
 }
 
 .about img {
     transform: scale(0.7);
+    
 }
 
 .about__desc .section__subtitle--about{
@@ -468,8 +470,6 @@ footer {
     padding-left: 1em;
     margin-left: 3rem;
 }
-
-
 
 @media (min-width: 800px) {
     .about__container {
