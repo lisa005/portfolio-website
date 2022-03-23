@@ -1,20 +1,24 @@
+// Displays modal after form submit 
 
-// Hamburger menu 
+var modal = document.getElementById("submit__modal");
+var btn = document.getElementById("submit__btn");
+var span = document.getElementsByClassName("close__btn")[0];
 
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav__list');
+btn.onclick = function() {
+    modal.style.display = "block";
+}
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    });
-});
-
+window.onclick = function(event) {
+    if(event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 // Sends form data to email 
+
 const contactForm = document.getElementById('contact__form');
 
 contactForm.addEventListener('submit', function(e) {
@@ -31,7 +35,7 @@ contactForm.addEventListener('submit', function(e) {
             'Accept': 'application/json'
         },
         body: JSON.stringify({
-            sender: nameInput.value,
+            sender: nameInput.value, 
             email: emailInput.value,
             message: messageInput.value
         }) 
@@ -43,23 +47,18 @@ contactForm.addEventListener('submit', function(e) {
         .catch(error => console.log(error));
 });
 
+// Hamburger menu 
 
-// Displays modal after form submit 
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav__list');
 
-var modal = document.getElementById('submit__modal');
-var btn = document.getElementById('submit__btn');
-var span = document.getElementsByClassName('close__btn')[0];
+navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+});
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open');
+    });
+});
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if(event.target == modal) {
-        modal.style.display = "none";
-    }
-}
