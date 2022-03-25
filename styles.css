@@ -550,8 +550,10 @@ footer {
 }
 
 .resume__body {
-    padding: 3rem;
+    padding: 1.5rem 3rem 3rem 3rem;
+    margin-top: 0;
 }
+
 
 .resume__heading {
     font-family: var(--ff-primary);
@@ -563,6 +565,10 @@ footer {
 
 .resume__section {
     margin-top: 3em;
+}
+
+.resume__section--summary {
+    margin-top: 0;
 }
 
 .resume__subsection {
@@ -613,7 +619,7 @@ footer {
         padding-left: 7rem;
     }
     .resume__body {
-        padding: 3rem 7rem;
+        padding: 1.5rem 7rem 3rem 7rem;
     }
 
     .resume__text, 
