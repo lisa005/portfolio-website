@@ -379,6 +379,8 @@ header {
 }
 
 .item__desc {
+    font-size: var(--fs-body);
+    line-height: 1;
     color: var(--clr-light);
     margin: 0;
 }
@@ -699,6 +701,14 @@ ul.writing-list {
 
 .projects__section {
     padding-bottom: 3rem;
+}
+
+.title-smaller {
+    font-size: 1.8rem;
+}
+
+.desc-smaller {
+    font-size: 1.2rem;
 }
 
 @media (min-width: 800px) {
